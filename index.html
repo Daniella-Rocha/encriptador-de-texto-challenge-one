@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Decodificador de textos</title>
+</head>
+
+<body>
+    <main class="principalContainer">
+        <section id="section1">
+            <header class="logo">
+                <div class="image">
+                    <img src="./styles/img/Vector.png" alt="logo da Alura">
+                </div>
+            </header>
+            <div class="editor">
+                <textarea class="editText" name="" cols="20" rows="5" placeholder="Digite seu texto"></textarea>
+            </div>
+            <div class="btnsContainer">
+                <div class="textMessage">
+                    <img src="./styles/img/vectorExclamationr.png" alt="">
+                    <p>Apenas letras minúsculas sem acento</p>
+                </div>
+                <div class="btns">
+                    <button class="buttonEncrypt" id="encrypt">
+                        Criptografar
+                    </button>
+                    <button class="buttonDecrypt" id="decrypt">
+                        Descriptografar
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="section2" class="section2">
+            <div class="sideText">
+                <div class="img">
+                    <img src="./styles/img/Highqualityproducts11.png" alt="">
+                </div>
+                <div class="encodedEmpty">
+                    <span>Nenhuma mensagem encontrada.</span>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                <div class="showText">
+                    <div class="newText">
+                        <textarea name="" id="resultText" cols="30" rows="5" class="editText"></textarea>
+                    </div>
+                    <div class="clipBoardContainer">
+                        <button class="clipBoard">Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3>Desenvolvido por Daniela R. Mathias</h3>
+        <a href="https://github.com/Daniella-Rocha"><img src="./styles/img/github.png"
+                alt="link para perfil no GitHub"></a>
+        <a href="https://www.linkedin.com/in/daniella-r-mathias/"><img src="./styles/img/linkedin.png"
+                alt="link para perfil no Linkedin"></a>
+    </footer>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
