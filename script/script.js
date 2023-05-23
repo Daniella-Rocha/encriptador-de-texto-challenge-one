@@ -61,11 +61,11 @@ function chageDisplay(text) {
 }
 
 function clipBoardArea() {
-    const copyText = resultText.value
+    const copyText = document.querySelector("#resultText");
     copyText.select();
     document.execCommand("copy");
     copyText.value = "";
-    console.log(copyText);
+    // console.log(copyText);
     alert("Texto copiado com sucesso!");
 
 }
