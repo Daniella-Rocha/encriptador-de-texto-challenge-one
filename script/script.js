@@ -62,7 +62,7 @@ function chageDisplay(text) {
 
 function clipBoardArea() {
     const copyText = resultText.value
-
+    copyText.select();
     document.execCommand("copy");
     copyText.value = "";
     console.log(copyText);
