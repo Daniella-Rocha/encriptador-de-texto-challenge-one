@@ -17,10 +17,12 @@ const encodedEmpty = document.querySelector(".encodedEmpty");
 const sideText = document.querySelector(".sideText");
 
 const firstSection = document.querySelector("#section1");
+
 const secondSection = document.querySelector("#section2");
 
+const btnTheme = document.querySelector("#btn-theme");
+
 function encryptText() {
-    // chageDisplay();
     const encryptText = editText.value;
     const splitText = encryptText.split("");
     for (let i = 0; i < splitText.length; i++) {
@@ -56,24 +58,97 @@ function chageDisplay(text) {
     img.style.display = "none";
     showText.classList.add("show");
     resultText.value = text
-    // if(resultText.value){
-    //     resultText.style.lineHeight = "1"
-    //     firstSection.style.height = "50%"
-    //     secondSection.style.height = "50%"
-    //     showText.style.height = "100%"
-    // }
 }
 
 function clipBoardArea() {
-    resultText.select();
+    const copyText = resultText.value
+
     document.execCommand("copy");
-    resultText.value = "";
-    alert("Copiado com sucesso!");
+    copyText.value = "";
+    console.log(copyText);
+    alert("Texto copiado com sucesso!");
+
 }
 
+function handleTheme() {
+    const globalPrimaryColor = "#0A3871";
+
+    const lightModeColor = "#fff";
+
+    const blackModeColor = "#000";
+
+    const editTextPlaceHolder = document.querySelector(".editText");
+
+    const divTheme = document.querySelector("#changeTheme");
+
+    const header = document.querySelector(".logo");
+
+    const lightIcon = document.querySelector("#changeTheme i");
+
+    const principalContainer = document.querySelector(".principalContainer");
+
+    const body = document.querySelector("body");
+
+    const section2Span = document.querySelector("#section2 .sideText .encodedEmpty span");
+
+    const section2Paragraph = document.querySelector("#section2 .sideText .encodedEmpty p");
+
+    const exclamationWarning = document.querySelector(".textMessage p");
+
+    const footerSignature = document.querySelector("footer h3");
+
+    if (divTheme.classList.contains("day")) {
+
+        divTheme.setAttribute("class", "night");
+
+        lightIcon.setAttribute("class", "fas fa-cloud-moon");
+
+        header.style.background = "#78a9f4";
+
+        body.style.background = "#4e4f50";
+
+        principalContainer.style.background = "#4e4f50";
+
+        editTextPlaceHolder.style.color = lightModeColor;
+
+        section2Span.style.color = lightModeColor;
+
+        section2Paragraph.style.color = lightModeColor;
+
+        encryptItem.style.background = "#78a9f4";
+
+        exclamationWarning.style.color = lightModeColor;
+
+        footerSignature.style.color = lightModeColor;
+
+    } else {
+
+        divTheme.setAttribute("class", "day");
+
+        lightIcon.setAttribute("class", "fas fa-cloud-sun");
+
+        header.style.background = globalPrimaryColor;
+
+        body.style.background = "none";
+
+        principalContainer.style.background = "none";
+
+        section2Span.style.color = blackModeColor;
+
+        section2Paragraph.style.color = blackModeColor;
+
+        encryptItem.style.background = "#0A3871";
+
+        exclamationWarning.style.color = blackModeColor;
+
+        footerSignature.style.color = blackModeColor;
+    }
+}
 
 encryptItem.addEventListener("click", encryptText);
 
 decryptItem.addEventListener("click", decryptText);
 
 clipBoard.addEventListener("click", clipBoardArea);
+
+btnTheme.addEventListener("click", handleTheme);

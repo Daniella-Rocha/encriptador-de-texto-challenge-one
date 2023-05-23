@@ -6,23 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./styles/img/fontAwesome/fontawesome/svgs/solid/file-code.svg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <title>Decodificador de textos</title>
 </head>
 
 <body>
+    <header class="logo">
+        <div class="image">
+            <img src="./styles/img/logobranca-alura.png" alt="logo da Alura">
+        </div>
+        <div id="changeTheme" class="day">
+            <i class="fas fa-cloud-sun fa-shake" style="color: #ecd855" id="btn-theme"></i>
+        </div>
+    </header>
     <main class="principalContainer">
+
         <section id="section1">
-            <header class="logo">
-                <div class="image">
-                    <img src="./styles/img/Vector.png" alt="logo da Alura">
-                </div>
-            </header>
+
             <div class="editor">
-                <textarea class="editText" name="" cols="20" rows="5" placeholder="Digite seu texto"></textarea>
+                <textarea class="editText" name="resultText" cols="20" rows="5"
+                    placeholder="Digite seu texto"></textarea>
             </div>
             <div class="btnsContainer">
                 <div class="textMessage">
-                    <img src="./styles/img/vectorExclamationr.png" alt="">
+                    <img src="./styles/img/fontAwesome/fontawesome/svgs/solid/circle-exclamation.svg"
+                        alt="exclamação instrução de uso">
+
                     <p>Apenas letras minúsculas sem acento</p>
                 </div>
                 <div class="btns">
@@ -46,7 +57,7 @@
                 </div>
                 <div class="showText">
                     <div class="newText">
-                        <textarea name="" id="resultText" cols="30" rows="5" class="editText"></textarea>
+                        <textarea name="resultText" id="resultText" cols="30" rows="5" class="editText"></textarea>
                     </div>
                     <div class="clipBoardContainer">
                         <button class="clipBoard">Copiar</button>

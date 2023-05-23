@@ -4,18 +4,22 @@
     box-sizing: border-box;
 }
 
+:root{
+    --global-primary-color: #0A3871;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .principalContainer{
     display: flex;
     width: 100%;
-    margin: 40px 0 0 40px;
+    height: 100%;
 }
 
 #section1,
@@ -33,20 +37,40 @@ body {
     justify-content: center;
     width: 40%;
     height: 100vh;
-    margin: 0 40px 40px 0;
+    margin: 40px 40px 0 0;
 } 
 
 .logo {
     display: flex;
-    width: 50%;
-    height: 20%;
+    width: 100%;
+    height: 15%;
     align-items: center;
-    margin: 40px 0 0 40px;
+    justify-content: space-between;
+    background: var(--global-primary-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
 }
 
 .image{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 80%;
+    margin: 20px 0 0 50px;
+    padding: 20px;
+}
+
+.image img{
+    width: 48px;
+    height: 56px;
+}
+
+#changeTheme{
+    margin: 40px 40px 0 0;
+    align-items: center;
+}
+
+#changeTheme i{
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
 }
 
 .editor{
@@ -62,7 +86,7 @@ body {
     border: none;
     resize: none;
     background-color: transparent;
-    color: #0A3871;
+    color: var(--global-primary-color);
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -70,7 +94,7 @@ body {
 }
 
 .editText::placeholder {
-    color: #0A3871;
+    color: var(--global-primary-color);
     opacity: 1;
 }
 
@@ -94,7 +118,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 100%;
+    height: 80%;
     align-items: center;
     justify-content: center;
     padding: 1em;
@@ -154,7 +178,7 @@ body {
 }
 
 .buttonEncrypt{
-    background: #0A3871;
+    background: var(--global-primary-color);
     color: #fff;
     font-size: 0.7em;
     transition: 1s all;
@@ -166,9 +190,9 @@ body {
 
 .buttonDecrypt{
     background: #D8DFE8;
-    color: #0A3871;
+    color: var(--primary-color);
     font-size: 0.7em;
-    border: 2px solid #0A3871;
+    border: 2px solid var(--global-primary-color);
 }
 
 ul {
@@ -203,7 +227,7 @@ ul {
 }
 
 .resultText{
-    color: #0A3871;
+    color: var(--global-primary-color);
     font-size: 24px;
     line-height: 36px;
 }
@@ -218,7 +242,7 @@ ul {
 .clipBoard{
     background: #D8DFE8;
     border-radius: 20px;
-    border: 2px solid #0A3871;
+    border: 2px solid var(--global-primary-color);
     padding: 20px;
     width: 300px;
 }
@@ -348,12 +372,17 @@ footer img{
     
     .logo{
         height: 50px;
-        width: 50%;
+        width: 100%;
     }
     
     .image{
         width: 50%;
         height: 50px;
+    }
+    
+    .image img{
+        width: 38px;
+        height: 36px;
     }
     
     .editor{
@@ -456,5 +485,14 @@ footer img{
         margin: 0;
         flex-wrap: nowrap;
         padding: 0;
+    }
+    
+    footer{
+        width: 100%;
+    }
+    
+    footer h3{
+        font-size: 12px;
+        font-weight: 100;
     }
 }
