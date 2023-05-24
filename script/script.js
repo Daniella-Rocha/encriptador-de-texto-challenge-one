@@ -65,7 +65,7 @@ function clipBoardArea() {
     copyText.select();
     document.execCommand("copy");
     copyText.value = "";
-    // console.log(copyText);
+    console.log(copyText);
     alert("Texto copiado com sucesso!");
 
 }
